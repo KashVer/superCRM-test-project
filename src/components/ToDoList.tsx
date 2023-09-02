@@ -1,3 +1,5 @@
+import React from "react";
+
 import { formattedDateOne, formattedDateTwo } from "../utils/dates";
 import { randomDescription, randomTagOne, randomTagTwo } from "../utils/texts";
 import Avatar from "../img/Img.png";
@@ -9,16 +11,13 @@ interface IToDoListProps {
 
 export const ToDoList: React.FC<IToDoListProps> = ({ toDos }) => {
   return (
-    <ul className="flex flex-col gap-[8px] overflow-y-scroll">
+    <ul className="flex flex-col gap-[8px]">
       {toDos &&
         toDos.map((toDo: any) => {
           return (
             <li
               key={`${toDo.id}${toDo.title}`}
               className="p-[4px] rounded-[7px] bg-[#F4F8FF]"
-              // style={{
-              //   boxShadow: "0px 1px 2px 0px #D0DAEB, 0px 0px 2px 0px #EEF4FE",
-              // }}
             >
               <div className="bg-white flex flex-col gap-[8px] p-[10px] rounded-[7px] shadow shadow-[0px 1px 2px 0px #D0DAEB, 0px 0px 2px 0px #EEF4FE]">
                 <div className="flex gap-[8px] items-baseline">
