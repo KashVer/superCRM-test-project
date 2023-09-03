@@ -7,7 +7,6 @@
 - Typescript
 - React
 - axios
-- MobX
 - faker.js
 
 ## Описание задачи
